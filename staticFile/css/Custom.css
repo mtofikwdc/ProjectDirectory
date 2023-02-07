@@ -1,0 +1,58 @@
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  font-family: sans-serif;
+  font-weight: bolder;
+  text-decoration: solid;
+  text-transform: uppercase;
+  background-color: brown;
+  width: 40%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  text-shadow: 0 0 10px black;
+  
+}
+
+.currentPath{
+  width: 100%;
+  height: auto;
+  background-color: azure;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  color: red;
+  text-shadow: 0 0 10px #ff00ff;
+  box-shadow: 0 0 5px #000;
+  text-transform: uppercase;
+
+}
+
+.fileList{
+  width: 100%;
+  height: auto;
+  background-color: aliceblue;
+  box-shadow: 0 0 3px 4px rgba(0,0,0,0.4);
+  font-family: sans-serif;
+}
+.fileList li{
+  font-size: 15px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  text-decoration: none;
+  
+  
+}
