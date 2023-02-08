@@ -1,4 +1,59 @@
 #Simple file manager using the python and flask
+"""
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function byId(e){return document.getElementById(e);}
+
+window.addEventListener('load', onDocLoaded, false);
+
+function onDocLoaded()
+{
+    
+    byId('loadBtn').addEventListener('click', onLoadBtnClick, false);
+}
+
+
+function loadFromFile(fileVar, tgtElem)
+{
+    var fileReader = new FileReader();
+    fileReader.onload = onFileLoaded;
+    fileReader.readAsBinaryString(fileVar);
+    function onFileLoaded(fileLoadedEvent)
+    {
+        var result,data;
+        data = fileLoadedEvent.target.result;
+        result = "data:";
+        result += fileVar.type;
+        result += ";base64,";
+        result += btoa(data);
+        tgtElem.src = result;
+    }
+}
+
+function onLoadBtnClick(evt)
+{
+    var fileInput = byId('mFileInput');
+    if (fileInput.files.length != 0)
+    {
+        var tgtElem = byId('tgt');
+        var curFile = fileInput.files[0];
+        loadFromFile(curFile, tgtElem);
+    }
+}
+
+</script>
+<style>
+</style>
+</head>
+<body>
+    <button id='loadBtn'>Load</button><input id='mFileInput' type='file'/><br>
+    <iframe id='tgt'></iframe>
+</body>
+</html>
+
+"""
 
 from flask import Flask
 from flask import render_template
